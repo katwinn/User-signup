@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>   
+        <style>
+            .error {
+            color: red;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>Signup</h1>
+        <style>
+        h1 {
+            background-color: rgb(88, 255, 255);
+            font-family: fantasy;
+            color: rgb(255, 41, 76);
+        } 
+        body {
+            background-image: url("https://78.media.tumblr.com/de9a30261ac5de7fda47326f2dc9c727/tumblr_pf1yzd5ozL1wgpbv4o1_540.png");
+            background-size: 100% 100%;   
+        }
+        .table {
+            color: blueviolet;
+        }
+        </style>
+            <table>
+                <tr>
+                    <form action= '/welcome' method='POST'>
+                    <td><label for="username">Username</label></td>
+
+                    <td>
+                        <input name="username" type="text" value=""></input>
+                        <p class= 'error'>{{username_error}}</p>
+                        
+                </td>
+                
+                    <tr>
+                        <td>
+                            <label for="password">Password</label></td>
+                        <td>
+                            <input name="password" type="password" value="" ></input>
+                            <p class= 'error'>{{password_error}}</p>
+                            
+
+                        </td>
+                    </tr>
+                    <tr>
+                            
+                        <td><label for="verify">Verify Password</label></td>
+                        <td>
+                            <input name="verify" type="password" value="" ></input>
+                            <p class= 'error'>{{password_missmatch}}</p>
+                            
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email (optional)</label></td>
+                        <td>
+                            <input name="email" value=""></input>
+                            <p class= 'error'>{{email_error}}</p>
+                        
+                            <input type="submit"></input>
+                         </form>
+                        </td>
+                    </tr>
+                            
+            </table>
+    </body>
+</html>
